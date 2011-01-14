@@ -188,3 +188,41 @@ Processing PostsController#index (for 127.0.0.1 at 2011-01-14 15:29:52) [GET]
 Rendering template within layouts/posts
 Rendering posts/index
 Completed in 66ms (View: 61, DB: 1) | 200 OK [http://localhost/posts]
+
+
+Processing PostsController#show (for 127.0.0.1 at 2011-01-14 16:26:53) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mPost Load (0.2ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 3) [0m
+Rendering template within layouts/posts
+Rendering posts/show
+Completed in 32ms (View: 26, DB: 0) | 200 OK [http://localhost/posts/3]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2011-01-14 16:27:05) [GET]
+  [4;35;1mPost Load (0.5ms)[0m   [0mSELECT * FROM "posts" [0m
+Rendering template within layouts/posts
+Rendering posts/index
+Completed in 19ms (View: 15, DB: 1) | 200 OK [http://localhost/posts]
+
+
+Processing PostsController#show (for 127.0.0.1 at 2011-01-14 16:27:08) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mPost Load (0.2ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 3) [0m
+Rendering template within layouts/posts
+Rendering posts/show
+Completed in 11ms (View: 6, DB: 0) | 200 OK [http://localhost/posts/3]
+
+
+Processing PostsController#edit (for 127.0.0.1 at 2011-01-14 16:27:11) [GET]
+  Parameters: {"id"=>"3"}
+  [4;35;1mPost Load (0.2ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."id" = 3) [0m
+Rendering template within layouts/posts
+Rendering posts/edit
+Completed in 14ms (View: 9, DB: 0) | 200 OK [http://localhost/posts/3/edit]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2011-01-14 16:27:14) [GET]
+  [4;36;1mPost Load (0.5ms)[0m   [0;1mSELECT * FROM "posts" [0m
+Rendering template within layouts/posts
+Rendering posts/index
+Completed in 15ms (View: 11, DB: 1) | 200 OK [http://localhost/posts]
