@@ -1,0 +1,190 @@
+
+
+
+Processing Rails::InfoController#properties (for 127.0.0.1 at 2011-01-14 12:17:38) [GET]
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+Completed in 21ms (View: 2, DB: 0) | 200 OK [http://localhost/rails/info/properties]
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mselect sqlite_version(*)[0m
+  [4;36;1mSQL (2.7ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (1.8ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreatePosts (20110114070149)
+  [4;36;1mSQL (0.4ms)[0m   [0;1mCREATE TABLE "posts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "body" text, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20110114070149')[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("posts")[0m
+
+
+Processing Rails::InfoController#properties (for 127.0.0.1 at 2011-01-14 15:18:50) [GET]
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Completed in 14ms (View: 2, DB: 1) | 200 OK [http://localhost/rails/info/properties]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2011-01-14 15:18:56) [GET]
+  [4;36;1mPost Load (0.3ms)[0m   [0;1mSELECT * FROM "posts" [0m
+Rendering template within layouts/posts
+Rendering posts/index
+Completed in 70ms (View: 65, DB: 0) | 200 OK [http://localhost/posts]
+
+
+Processing PostsController#new (for 127.0.0.1 at 2011-01-14 15:19:06) [GET]
+Rendering template within layouts/posts
+Rendering posts/new
+Completed in 13ms (View: 9, DB: 0) | 200 OK [http://localhost/posts/new]
+
+
+Processing PostsController#create (for 127.0.0.1 at 2011-01-14 15:19:55) [POST]
+  Parameters: {"commit"=>"Create", "post"=>{"body"=>"This tutorial video goes way too fast. It really needs to slow down!", "title"=>"Tutorial video too fast."}, "authenticity_token"=>"iq/3xaBm4duMVygUSIRGS5mY1DBYI9u1cYV4Q8+Fst0="}
+  [4;35;1mPost Create (0.4ms)[0m   [0mINSERT INTO "posts" ("created_at", "title", "body", "updated_at") VALUES('2011-01-14 07:19:55', 'Tutorial video too fast.', 'This tutorial video goes way too fast. It really needs to slow down!', '2011-01-14 07:19:55')[0m
+Redirected to http://localhost:3000/posts/1
+Completed in 27ms (DB: 0) | 302 Found [http://localhost/posts]
+
+
+Processing PostsController#show (for 127.0.0.1 at 2011-01-14 15:19:56) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mPost Load (0.2ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+Rendering template within layouts/posts
+Rendering posts/show
+Completed in 64ms (View: 59, DB: 0) | 200 OK [http://localhost/posts/1]
+
+
+Processing PostsController#edit (for 127.0.0.1 at 2011-01-14 15:21:31) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mPost Load (0.2ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+Rendering template within layouts/posts
+Rendering posts/edit
+Completed in 13ms (View: 9, DB: 0) | 200 OK [http://localhost/posts/1/edit]
+
+
+Processing PostsController#update (for 127.0.0.1 at 2011-01-14 15:23:01) [PUT]
+  Parameters: {"commit"=>"Update", "post"=>{"body"=>"This tutorial video goes way too fast.\r\nThey really need to leave some pauses after each action, to *at least* give people a chance to pause it.", "title"=>"Tutorial video too fast."}, "authenticity_token"=>"iq/3xaBm4duMVygUSIRGS5mY1DBYI9u1cYV4Q8+Fst0=", "id"=>"1"}
+  [4;36;1mPost Load (0.3ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+  [4;35;1mPost Update (0.4ms)[0m   [0mUPDATE "posts" SET "updated_at" = '2011-01-14 07:23:01', "body" = 'This tutorial video goes way too fast.
+They really need to leave some pauses after each action, to *at least* give people a chance to pause it.' WHERE "id" = 1[0m
+Redirected to http://localhost:3000/posts/1
+Completed in 10ms (DB: 1) | 302 Found [http://localhost/posts/1]
+
+
+Processing PostsController#show (for 127.0.0.1 at 2011-01-14 15:23:01) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mPost Load (0.2ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+Rendering template within layouts/posts
+Rendering posts/show
+Completed in 7ms (View: 2, DB: 0) | 200 OK [http://localhost/posts/1]
+
+
+Processing PostsController#edit (for 127.0.0.1 at 2011-01-14 15:25:38) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mPost Load (0.2ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+Rendering template within layouts/posts
+Rendering posts/edit
+Completed in 10ms (View: 5, DB: 0) | 200 OK [http://localhost/posts/1/edit]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2011-01-14 15:25:43) [GET]
+  [4;36;1mPost Load (0.5ms)[0m   [0;1mSELECT * FROM "posts" [0m
+Rendering template within layouts/posts
+Rendering posts/index
+Completed in 11ms (View: 6, DB: 0) | 200 OK [http://localhost/posts]
+
+
+Processing PostsController#new (for 127.0.0.1 at 2011-01-14 15:25:46) [GET]
+Rendering template within layouts/posts
+Rendering posts/new
+Completed in 8ms (View: 4, DB: 0) | 200 OK [http://localhost/posts/new]
+
+
+Processing PostsController#create (for 127.0.0.1 at 2011-01-14 15:25:56) [POST]
+  Parameters: {"commit"=>"Create", "post"=>{"body"=>"I don't need a title!", "title"=>""}, "authenticity_token"=>"iq/3xaBm4duMVygUSIRGS5mY1DBYI9u1cYV4Q8+Fst0="}
+Rendering template within layouts/posts
+Rendering posts/new
+Completed in 14ms (View: 8, DB: 0) | 200 OK [http://localhost/posts]
+
+
+Processing PostsController#create (for 127.0.0.1 at 2011-01-14 15:26:01) [POST]
+  Parameters: {"commit"=>"Create", "post"=>{"body"=>"I don't need a title!", "title"=>" "}, "authenticity_token"=>"iq/3xaBm4duMVygUSIRGS5mY1DBYI9u1cYV4Q8+Fst0="}
+Rendering template within layouts/posts
+Rendering posts/new
+Completed in 66ms (View: 59, DB: 0) | 200 OK [http://localhost/posts]
+
+
+Processing PostsController#create (for 127.0.0.1 at 2011-01-14 15:26:07) [POST]
+  Parameters: {"commit"=>"Create", "post"=>{"body"=>"I don't need a title!", "title"=>"-"}, "authenticity_token"=>"iq/3xaBm4duMVygUSIRGS5mY1DBYI9u1cYV4Q8+Fst0="}
+  [4;35;1mPost Create (0.7ms)[0m   [0mINSERT INTO "posts" ("created_at", "title", "body", "updated_at") VALUES('2011-01-14 07:26:07', '-', 'I don''t need a title!', '2011-01-14 07:26:07')[0m
+Redirected to http://localhost:3000/posts/2
+Completed in 11ms (DB: 1) | 302 Found [http://localhost/posts]
+
+
+Processing PostsController#show (for 127.0.0.1 at 2011-01-14 15:26:07) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mPost Load (0.2ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 2) [0m
+Rendering template within layouts/posts
+Rendering posts/show
+Completed in 7ms (View: 2, DB: 0) | 200 OK [http://localhost/posts/2]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2011-01-14 15:26:35) [GET]
+  [4;35;1mPost Load (0.5ms)[0m   [0mSELECT * FROM "posts" [0m
+Rendering template within layouts/posts
+Rendering posts/index
+Completed in 12ms (View: 8, DB: 0) | 200 OK [http://localhost/posts]
+
+
+Processing PostsController#new (for 127.0.0.1 at 2011-01-14 15:26:37) [GET]
+Rendering template within layouts/posts
+Rendering posts/new
+Completed in 8ms (View: 4, DB: 0) | 200 OK [http://localhost/posts/new]
+
+
+Processing PostsController#create (for 127.0.0.1 at 2011-01-14 15:28:06) [POST]
+  Parameters: {"commit"=>"Create", "post"=>{"body"=>"So... \"validates_presence_of :blah\" means that 'this model throws up an error if :blah is blank/nul/etc.", "title"=>""}, "authenticity_token"=>"iq/3xaBm4duMVygUSIRGS5mY1DBYI9u1cYV4Q8+Fst0="}
+Rendering template within layouts/posts
+Rendering posts/new
+Completed in 14ms (View: 7, DB: 0) | 200 OK [http://localhost/posts]
+
+
+Processing PostsController#create (for 127.0.0.1 at 2011-01-14 15:29:47) [POST]
+  Parameters: {"commit"=>"Create", "post"=>{"body"=>"So... \"validates_presence_of :blah\" means that 'this model throws up an error if :blah is blank/nul/etc.\r\n\r\nI wonder if there's something like \"suggests_presence_of\", which returns a messages like: \"are you sure you want to leave :blah blank?\".", "title"=>"meaning of \"validates_presence_of\""}, "authenticity_token"=>"iq/3xaBm4duMVygUSIRGS5mY1DBYI9u1cYV4Q8+Fst0="}
+  [4;36;1mPost Create (0.6ms)[0m   [0;1mINSERT INTO "posts" ("created_at", "title", "body", "updated_at") VALUES('2011-01-14 07:29:47', 'meaning of "validates_presence_of"', 'So... "validates_presence_of :blah" means that ''this model throws up an error if :blah is blank/nul/etc.
+
+I wonder if there''s something like "suggests_presence_of", which returns a messages like: "are you sure you want to leave :blah blank?".', '2011-01-14 07:29:47')[0m
+Redirected to http://localhost:3000/posts/3
+Completed in 11ms (DB: 1) | 302 Found [http://localhost/posts]
+
+
+Processing PostsController#show (for 127.0.0.1 at 2011-01-14 15:29:47) [GET]
+  Parameters: {"id"=>"3"}
+  [4;35;1mPost Load (0.9ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."id" = 3) [0m
+Rendering template within layouts/posts
+Rendering posts/show
+Completed in 12ms (View: 4, DB: 1) | 200 OK [http://localhost/posts/3]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2011-01-14 15:29:52) [GET]
+  [4;36;1mPost Load (0.5ms)[0m   [0;1mSELECT * FROM "posts" [0m
+Rendering template within layouts/posts
+Rendering posts/index
+Completed in 66ms (View: 61, DB: 1) | 200 OK [http://localhost/posts]
