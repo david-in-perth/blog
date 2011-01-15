@@ -226,3 +226,13 @@ Processing PostsController#index (for 127.0.0.1 at 2011-01-14 16:27:14) [GET]
 Rendering template within layouts/posts
 Rendering posts/index
 Completed in 15ms (View: 11, DB: 1) | 200 OK [http://localhost/posts]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2011-01-15 08:13:04) [GET]
+  [4;36;1mPost Load (1.0ms)[0m   [0;1mSELECT * FROM "posts" [0m
+Rendering template within layouts/posts
+Rendering posts/index
+Rendered posts/_post (14.8ms)
+Rendered posts/_post (0.8ms)
+Rendered posts/_post (0.8ms)
+Completed in 44ms (View: 38, DB: 1) | 200 OK [http://localhost/posts]
