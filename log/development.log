@@ -858,3 +858,35 @@ Rendered comments/_comment (3.3ms)
 Rendered comments/_comment (1.0ms)
 DEPRECATION WARNING: formatted_posts_path() has been deprecated. Please pass format to the standard posts_path method instead.. (called from _run_erb_app47views47layouts47posts46html46erb at /Users/dprince/Dropbox/coding/rails/blog/app/views/layouts/posts.html.erb:9)
 Completed in 47ms (View: 29, DB: 2) | 200 OK [http://localhost/posts/4]
+
+
+Processing CommentsController#create (for 127.0.0.1 at 2011-01-17 12:38:10) [POST]
+  Parameters: {"comment"=>{"body"=>"Testing javascript comments."}, "commit"=>"Add Comment", "post_id"=>"4", "authenticity_token"=>"FXl3iVfi3DoWVDBf5F8rV1uWLHpCiKxLVfRAWzEWwvc="}
+Redirected to http://localhost:3000/posts/4
+Completed in 18ms (DB: 1) | 302 Found [http://localhost/posts/4/comments]
+
+
+Processing PostsController#show (for 127.0.0.1 at 2011-01-17 12:38:10) [GET]
+  Parameters: {"id"=>"4"}
+Rendering template within layouts/posts
+Rendering posts/show
+Rendered posts/_post (3.8ms)
+Rendered comments/_comment (1.0ms)
+Rendered comments/_comment (0.6ms)
+Rendered comments/_comment (0.5ms)
+DEPRECATION WARNING: formatted_posts_path() has been deprecated. Please pass format to the standard posts_path method instead.. (called from _run_erb_app47views47layouts47posts46html46erb at /Users/dprince/Dropbox/coding/rails/blog/app/views/layouts/posts.html.erb:9)
+Completed in 127ms (View: 119, DB: 1) | 200 OK [http://localhost/posts/4]
+
+
+Processing CommentsController#create (for 127.0.0.1 at 2011-01-17 12:38:41) [POST]
+  Parameters: {"comment"=>{"body"=>"That doesn't seem to have worked.\nMaybe I didn't save one of the files..."}, "commit"=>"Add Comment", "post_id"=>"4", "authenticity_token"=>"FXl3iVfi3DoWVDBf5F8rV1uWLHpCiKxLVfRAWzEWwvc="}
+Rendering comments/create
+Rendered comments/_comment (3.2ms)
+Completed in 23ms (View: 8, DB: 1) | 200 OK [http://localhost/posts/4/comments]
+
+
+Processing CommentsController#create (for 127.0.0.1 at 2011-01-17 12:38:58) [POST]
+  Parameters: {"comment"=>{"body"=>"aha! I hadn't saved posts.html.erb."}, "commit"=>"Add Comment", "post_id"=>"4", "authenticity_token"=>"FXl3iVfi3DoWVDBf5F8rV1uWLHpCiKxLVfRAWzEWwvc="}
+Rendering comments/create
+Rendered comments/_comment (2.7ms)
+Completed in 20ms (View: 4, DB: 1) | 200 OK [http://localhost/posts/4/comments]
