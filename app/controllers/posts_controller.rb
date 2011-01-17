@@ -7,6 +7,9 @@ class PostsController < ApplicationController
     respond_to do |format|
       format.html # index.html.erb
       format.xml  { render :xml => @posts }
+      format.json { render :json => @posts }
+      format.atom
+#      format.xhtml { render :xhtml => @posts }
     end
   end
 
@@ -18,6 +21,8 @@ class PostsController < ApplicationController
     respond_to do |format|
       format.html # show.html.erb
       format.xml  { render :xml => @post }
+      format.json { render :json => @post }
+#      format.xhtml { render :xhtml => @post }
     end
   end
 

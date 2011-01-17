@@ -236,3 +236,208 @@ Rendered posts/_post (14.8ms)
 Rendered posts/_post (0.8ms)
 Rendered posts/_post (0.8ms)
 Completed in 44ms (View: 38, DB: 1) | 200 OK [http://localhost/posts]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2011-01-17 10:16:16) [GET]
+  [4;36;1mPost Load (0.6ms)[0m   [0;1mSELECT * FROM "posts" [0m
+Rendering template within layouts/posts
+Rendering posts/index
+Rendered posts/_post (14.8ms)
+Rendered posts/_post (0.8ms)
+Rendered posts/_post (0.8ms)
+Completed in 41ms (View: 37, DB: 1) | 200 OK [http://localhost/posts]
+
+
+Processing PostsController#show (for 127.0.0.1 at 2011-01-17 10:18:24) [GET]
+  Parameters: {"id"=>"3"}
+  [4;35;1mPost Load (0.2ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."id" = 3) [0m
+Rendering template within layouts/posts
+Rendering posts/show
+Rendered posts/_post (2.3ms)
+Completed in 60ms (View: 55, DB: 0) | 200 OK [http://localhost/posts/3]
+
+
+Processing PostsController#show to xml (for 127.0.0.1 at 2011-01-17 10:20:35) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mPost Load (0.2ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 3) [0m
+Completed in 141ms (View: 136, DB: 0) | 200 OK [http://localhost/posts/3.xml]
+
+
+Processing PostsController#show to html (for 127.0.0.1 at 2011-01-17 10:20:59) [GET]
+  Parameters: {"id"=>"3"}
+  [4;35;1mPost Load (0.2ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."id" = 3) [0m
+Rendering template within layouts/posts
+Rendering posts/show
+Rendered posts/_post (1.8ms)
+Completed in 10ms (View: 6, DB: 0) | 200 OK [http://localhost/posts/3.html]
+
+
+Processing PostsController#show to xml (for 127.0.0.1 at 2011-01-17 10:21:39) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mPost Load (0.2ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 3) [0m
+Completed in 7ms (View: 2, DB: 0) | 200 OK [http://localhost/posts/3.xml]
+
+
+Processing PostsController#show to json (for 127.0.0.1 at 2011-01-17 10:24:21) [GET]
+  Parameters: {"id"=>"3"}
+  [4;35;1mPost Load (0.2ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."id" = 3) [0m
+Completed in 6ms (View: 1, DB: 0) | 406 Not Acceptable [http://localhost/posts/3.json]
+
+
+Processing PostsController#show to json (for 127.0.0.1 at 2011-01-17 10:25:21) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mPost Load (0.2ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 3) [0m
+Completed in 7ms (View: 2, DB: 0) | 200 OK [http://localhost/posts/3.json]
+
+
+Processing PostsController#show to xhtml (for 127.0.0.1 at 2011-01-17 10:32:45) [GET]
+  Parameters: {"id"=>"3"}
+  [4;35;1mPost Load (0.2ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."id" = 3) [0m
+
+NameError (uninitialized constant Mime::XHTML):
+  app/controllers/posts_controller.rb:24:in `show'
+  app/controllers/posts_controller.rb:19:in `show'
+
+Rendered rescues/_trace (94.8ms)
+Rendered rescues/_request_and_response (1.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PostsController#show to xhtml (for 127.0.0.1 at 2011-01-17 10:33:49) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mPost Load (0.2ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 3) [0m
+
+NameError (uninitialized constant Mime::XHTML):
+  app/controllers/posts_controller.rb:24:in `show'
+  app/controllers/posts_controller.rb:19:in `show'
+
+Rendered rescues/_trace (49.3ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PostsController#show to xhtml (for 127.0.0.1 at 2011-01-17 10:34:54) [GET]
+  Parameters: {"id"=>"3"}
+  [4;35;1mPost Load (0.2ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."id" = 3) [0m
+
+NameError (uninitialized constant Mime::XHTML):
+  app/controllers/posts_controller.rb:25:in `show'
+  app/controllers/posts_controller.rb:21:in `show'
+
+Rendered rescues/_trace (46.8ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PostsController#index (for 127.0.0.1 at 2011-01-17 10:35:00) [GET]
+  [4;36;1mPost Load (0.5ms)[0m   [0;1mSELECT * FROM "posts" [0m
+
+NameError (uninitialized constant Mime::XHTML):
+  app/controllers/posts_controller.rb:12:in `index'
+  app/controllers/posts_controller.rb:7:in `index'
+
+Rendered rescues/_trace (103.6ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PostsController#index (for 127.0.0.1 at 2011-01-17 10:35:07) [GET]
+  [4;35;1mPost Load (0.5ms)[0m   [0mSELECT * FROM "posts" [0m
+
+NameError (uninitialized constant Mime::XHTML):
+  app/controllers/posts_controller.rb:12:in `index'
+  app/controllers/posts_controller.rb:7:in `index'
+
+Rendered rescues/_trace (46.4ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PostsController#index (for 127.0.0.1 at 2011-01-17 10:35:41) [GET]
+  [4;36;1mPost Load (0.6ms)[0m   [0;1mSELECT * FROM "posts" [0m
+Rendering template within layouts/posts
+Rendering posts/index
+Rendered posts/_post (2.5ms)
+Rendered posts/_post (0.7ms)
+Rendered posts/_post (0.8ms)
+Completed in 13ms (View: 8, DB: 1) | 200 OK [http://localhost/posts/]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2011-01-17 10:35:49) [GET]
+  [4;35;1mPost Load (0.6ms)[0m   [0mSELECT * FROM "posts" [0m
+
+NameError (uninitialized constant Mime::XHTML):
+  app/controllers/posts_controller.rb:12:in `index'
+  app/controllers/posts_controller.rb:7:in `index'
+
+Rendered rescues/_trace (103.2ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PostsController#index (for 127.0.0.1 at 2011-01-17 10:35:59) [GET]
+  [4;36;1mPost Load (0.5ms)[0m   [0;1mSELECT * FROM "posts" [0m
+Rendering template within layouts/posts
+Rendering posts/index
+Rendered posts/_post (2.5ms)
+Rendered posts/_post (0.7ms)
+Rendered posts/_post (0.8ms)
+Completed in 10ms (View: 6, DB: 1) | 200 OK [http://localhost/posts/]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2011-01-17 10:37:06) [GET]
+  [4;35;1mPost Load (0.6ms)[0m   [0mSELECT * FROM "posts" [0m
+Rendering template within layouts/posts
+Rendering posts/index
+Rendered posts/_post (2.6ms)
+Rendered posts/_post (0.7ms)
+Rendered posts/_post (0.8ms)
+Completed in 11ms (View: 6, DB: 1) | 200 OK [http://localhost/posts/]
+
+
+Processing PostsController#show (for 127.0.0.1 at 2011-01-17 10:37:13) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mPost Load (0.2ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 3) [0m
+Rendering template within layouts/posts
+Rendering posts/show
+Rendered posts/_post (1.7ms)
+Completed in 11ms (View: 6, DB: 0) | 200 OK [http://localhost/posts/3]
+
+
+Processing PostsController#show to atom (for 127.0.0.1 at 2011-01-17 10:37:51) [GET]
+  Parameters: {"id"=>"3"}
+  [4;35;1mPost Load (0.2ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."id" = 3) [0m
+Completed in 5ms (View: 1, DB: 0) | 406 Not Acceptable [http://localhost/posts/3.atom]
+
+
+Processing PostsController#index to atom (for 127.0.0.1 at 2011-01-17 10:38:00) [GET]
+  [4;36;1mPost Load (0.6ms)[0m   [0;1mSELECT * FROM "posts" [0m
+Rendering posts/index
+Completed in 66ms (View: 62, DB: 1) | 200 OK [http://localhost/posts.atom]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2011-01-17 10:38:47) [GET]
+  [4;35;1mPost Load (0.5ms)[0m   [0mSELECT * FROM "posts" [0m
+Rendering template within layouts/posts
+Rendering posts/index
+Rendered posts/_post (2.5ms)
+Rendered posts/_post (0.7ms)
+Rendered posts/_post (0.8ms)
+Completed in 11ms (View: 6, DB: 1) | 200 OK [http://localhost/posts]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2011-01-17 10:40:20) [GET]
+  [4;36;1mPost Load (0.5ms)[0m   [0;1mSELECT * FROM "posts" [0m
+Rendering template within layouts/posts
+Rendering posts/index
+Rendered posts/_post (2.6ms)
+Rendered posts/_post (0.7ms)
+Rendered posts/_post (0.8ms)
+DEPRECATION WARNING: formatted_posts_path() has been deprecated. Please pass format to the standard posts_path method instead.. (called from _run_erb_app47views47layouts47posts46html46erb at /Users/dprince/Dropbox/coding/rails/blog/app/views/layouts/posts.html.erb:9)
+Completed in 15ms (View: 10, DB: 1) | 200 OK [http://localhost/posts]
+
+
+Processing PostsController#index to atom (for 127.0.0.1 at 2011-01-17 10:40:21) [GET]
+  [4;35;1mPost Load (0.5ms)[0m   [0mSELECT * FROM "posts" [0m
+Rendering posts/index
+Completed in 10ms (View: 6, DB: 1) | 200 OK [http://localhost/posts.atom]
